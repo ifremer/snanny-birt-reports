@@ -337,7 +337,7 @@ len = myJSONObject.cells.length;
 // Counter
 count = 0;]]></method>
             <method name="fetch"><![CDATA[if(count < len) {
- var icon =myJSONObject.cells[count].documentation.link;
+ var icon =myJSONObject.cells[count].attrs.image["xlink:href"];
  var description= myJSONObject.cells[count].description;
 var outputLen =  myJSONObject.cells[count].custom.output.length;
 var identifierLen =  myJSONObject.cells[count].custom.identifier.length;
@@ -378,7 +378,7 @@ for ( var i =0;i<outputLen;i++)
 for ( var i =0;i<classifierLen;i++)
  {
  listClassName.add(myJSONObject.cells[count].custom.classifier[i].name);
- listClassUri.add(myJSONObject.cells[count].custom.classifier[i].URI);
+ listClassUri.add(myJSONObject.cells[count].custom.classifier[i].value);
 
 }
 for ( var i =0;i<eventLen;i++)
@@ -602,7 +602,7 @@ if(count < len) {
 
   var name     = myJSONObject.cells[count].attrs.text["text"];
   var type    = myJSONObject.cells[count].type;
-  var icon =myJSONObject.cells[count].documentation.link;
+  var icon =myJSONObject.cells[count].attrs.image["xlink:href"];
  
 
 
